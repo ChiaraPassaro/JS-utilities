@@ -88,6 +88,7 @@ function qsa(selector) {
 
 
 // http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/
-function isArray(param) {
+/*EcmaScript 3*/
+function isArrayEs3(param) {
     return Object.prototype.toString.call(param) === '[object Array]';
 }
