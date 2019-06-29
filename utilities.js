@@ -4,7 +4,7 @@ accetta un array o una serie di argomenti
 */
 function minNumber(){
     if (Object.prototype.toString.call(arguments[0]) === '[object Array]'){
-        return Math.min.apply(null, arguments[0]);
+        return Math.min.apply(null, arguments[0]); // <-- Math min accetta come parametro una lista, per poter passare un array utilizziamo Function.prototype.apply() con thisArg = null
     }
     return Math.min.apply(null, arguments);
 }
