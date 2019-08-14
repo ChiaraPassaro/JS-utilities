@@ -1,3 +1,4 @@
+//https://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript
 var Events = (function(){
     var topics = {};
     var subscribersId = -1;
