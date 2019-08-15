@@ -3,7 +3,7 @@ var Events = (function(){
     var topics = {};
     var subscribersId = -1;
 
-    var publish = function (topic, args){
+    var publish = function (topic, data){
         if (!topics[topic]){
             return false;
         }
@@ -12,7 +12,7 @@ var Events = (function(){
         var lengthSubscribers = topics ? subscribers.length : 0;
         
         while (lengthSubscribers--) {            
-            subscribers[lengthSubscribers].callback(topic, args);
+            subscribers[lengthSubscribers].callback(topic, data);
         }
 
         return this;
